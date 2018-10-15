@@ -1,27 +1,10 @@
 package com.centerflag982.launchcode.changeCalculator;
 
-import com.centerflag982.launchcode.changeCalculator.Calculators.CoinCalculator;
-import com.centerflag982.launchcode.changeCalculator.Calculators.CoinCalculatorEuro;
-import com.centerflag982.launchcode.changeCalculator.Calculators.CoinCalculatorUSD;
-import org.springframework.context.ApplicationContext;
+import com.centerflag982.launchcode.changeCalculator.Calculators.*;
 
 import java.util.Scanner;
 
 public class UserInterface {
-
-    /*
-    //---------Singleton implementation----------
-    private UserInterface() {}
-
-    private static UserInterface userInterface;
-    public static UserInterface getInstance() {
-        if (userInterface == null){
-            userInterface = new UserInterface();
-        }
-        return userInterface;
-    }
-    //-------------------------------------------
-    */
 
     public String getChangeAmount(){
         Scanner inputReader = new Scanner(System.in);

@@ -4,7 +4,7 @@ import org.junit.Test;
 public class EuroOutputTest {
 
     @Test
-    public void PrintsArrayValues(){
+    public void printsArrayValues(){
         EuroOutput euroOutput = new EuroOutput();
 
         int[] testArray = new int[]{1,2,3,4,5,6,7,8};
