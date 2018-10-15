@@ -2,7 +2,7 @@ package com.centerflag982.launchcode.changeCalculator;
 
 public class CoinCalculatorEuro implements CoinCalculator{
 
-    private int coinAmounts[] = new int[]{0,0,0,0,0,0,0,0}; //dollar, half dollar, quarter, dime, nickels, pennies
+    private int coinAmounts[] = new int[]{0,0,0,0,0,0,0,0}; //two Euro, one Euro, 50 Eurocent, 20 EC, 10 EC, 5 EC, 2 EC, 1 EC
 
     public int[] calculateChange(String amountOfChange) {
         int euroCentAmount = Integer.parseInt(amountOfChange.substring(amountOfChange.length() - 2));
