@@ -1,7 +1,6 @@
 package com.centerflag982.launchcode.changeCalculator;
 
-//import com.centerflag982.launchcode.changeCalculator.CoinCalculatorUSD;
-
+import com.centerflag982.launchcode.changeCalculator.Calculators.CoinCalculator;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -22,7 +21,9 @@ public class Main {
     }
 
     private void run(){
-        userInterface.getChangeAmount();
+        String changeString = userInterface.getChangeAmount();
+        CoinCalculator calculator = userInterface.getCalculatorType(changeString);
+        calculator.calculateChange(changeString);
     }
 
     /*

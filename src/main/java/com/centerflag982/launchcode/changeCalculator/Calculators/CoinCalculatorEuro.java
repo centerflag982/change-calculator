@@ -1,6 +1,6 @@
-package com.centerflag982.launchcode.changeCalculator;
+package com.centerflag982.launchcode.changeCalculator.Calculators;
 
-public class CoinCalculatorEuro implements CoinCalculator{
+public class CoinCalculatorEuro implements CoinCalculator {
 
     private int coinAmounts[] = new int[]{0,0,0,0,0,0,0,0}; //two Euro, one Euro, 50 Eurocent, 20 EC, 10 EC, 5 EC, 2 EC, 1 EC
 

@@ -1,5 +1,10 @@
 package com.centerflag982.launchcode.changeCalculator;
 
+import com.centerflag982.launchcode.changeCalculator.Calculators.CoinCalculator;
+import com.centerflag982.launchcode.changeCalculator.Calculators.CoinCalculatorEuro;
+import com.centerflag982.launchcode.changeCalculator.Calculators.CoinCalculatorUSD;
+import org.springframework.context.ApplicationContext;
+
 import java.util.Scanner;
 
 public class UserInterface {
@@ -43,5 +48,17 @@ public class UserInterface {
             dataValid = false;
         }
         return dataValid;
+    }
+
+    public CoinCalculator getCalculatorType(String changeString){
+        CoinCalculator calcType;
+        switch (changeString.substring(0,1)){
+            case "$": calcType = new CoinCalculatorUSD();
+                        break;
+            case "€": calcType = new CoinCalculatorEuro();
+                        break;
+            default: throw new RuntimeException("switch somehow received bad currency value; defaulting to USD");
+        }
+        return calcType;
     }
 }

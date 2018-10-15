@@ -1,3 +1,4 @@
+import com.centerflag982.launchcode.changeCalculator.Calculators.*;
 import com.centerflag982.launchcode.changeCalculator.UserInterface;
 import org.junit.Test;
 
@@ -48,6 +49,24 @@ public class UserInterfaceTest {
         String testAmount = userInterface.getChangeAmount();
 
         assertEquals("$3.60", testAmount);
+    }
+
+    @Test
+    public void dollarSymbolGivesUSDCalcInstance() {
+        UserInterface userInterface = new UserInterface();
+
+        CoinCalculator testInstance = userInterface.getCalculatorType("$50.00");
+
+        assertTrue(testInstance instanceof CoinCalculatorUSD);
+    }
+
+    @Test
+    public void euroSymbolGivesEuroCalcInstance() {
+        UserInterface userInterface = new UserInterface();
+
+        CoinCalculator testInstance = userInterface.getCalculatorType("€50.00");
+
+        assertTrue(testInstance instanceof CoinCalculatorEuro);
     }
 
 }

@@ -1,6 +1,6 @@
-package com.centerflag982.launchcode.changeCalculator;
+package com.centerflag982.launchcode.changeCalculator.Calculators;
 
-public class CoinCalculatorUSD implements CoinCalculator{
+public class CoinCalculatorUSD implements CoinCalculator {
 
     private int coinAmounts[] = new int[]{0,0,0,0,0,0}; //dollar, half dollar, quarter, dime, nickels, pennies
 

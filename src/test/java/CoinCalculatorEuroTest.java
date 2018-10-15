@@ -1,4 +1,4 @@
-import com.centerflag982.launchcode.changeCalculator.CoinCalculatorEuro;
+import com.centerflag982.launchcode.changeCalculator.Calculators.CoinCalculatorEuro;
 import org.junit.Test;
 
 import java.util.Arrays;
