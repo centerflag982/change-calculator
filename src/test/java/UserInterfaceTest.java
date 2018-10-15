@@ -11,10 +11,19 @@ import static org.junit.Assert.assertTrue;
 public class UserInterfaceTest {
 
     @Test
-    public void badInputThrowsException() {
+    public void badFormattingThrowsException() {
         UserInterface userInterface = new UserInterface();
 
         boolean testResult = userInterface.validateChangeAmount("$752.0)");
+
+        assertFalse(testResult);
+    }
+
+    @Test
+    public void nonDollarOrEuroThrowsException() {
+        UserInterface userInterface = new UserInterface();
+
+        boolean testResult = userInterface.validateChangeAmount("£82.00)");
 
         assertFalse(testResult);
     }
